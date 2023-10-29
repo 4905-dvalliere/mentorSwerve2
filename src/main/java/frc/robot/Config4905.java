@@ -29,6 +29,7 @@ public class Config4905 {
   private Config m_config;
   private Config m_controllers;
   private Config m_drivetrainConfig;
+  private Config m_swervedrivetrainConfig;
   private Config m_sensorConfig;
   private Config m_commandConstantsConfig;
   private Config m_ledConfig;
@@ -143,6 +144,7 @@ public class Config4905 {
     m_controllers = load("controllers.conf");
     m_sensorConfig = load("sensors.conf");
     m_drivetrainConfig = load("drivetrain.conf");
+    m_swervedrivetrainConfig = load("swervedrivetrain.conf");
     m_climberConfig = load("climber.conf");
     m_ledConfig = load("LED.conf");
     m_leftLedConfig = load("leftLED.conf");
@@ -174,6 +176,18 @@ public class Config4905 {
 
   public boolean doesDrivetrainExist() {
     if (m_config.hasPath("subsystems.driveTrain")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public Config getSwerveDrivetrainConfig() {
+    return m_swervedrivetrainConfig;
+  }
+
+  public boolean doesSwerveDrivetrainExist() {
+    if (m_config.hasPath("subsystems.swerveDriveTrain")) {
       return true;
     } else {
       return false;

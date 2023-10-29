@@ -28,6 +28,7 @@ import frc.robot.telemetries.Trace;
  * project.
  */
 public class Robot extends TimedRobot {
+  public static final String ctreConfigs = null;
   private Command m_autonomousCommand;
   private SubsystemsContainer m_subsystemContainer;
   private SensorsContainer m_sensorsContainer;
