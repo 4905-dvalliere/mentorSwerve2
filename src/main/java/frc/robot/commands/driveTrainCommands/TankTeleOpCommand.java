@@ -24,7 +24,7 @@ import frc.robot.telemetries.TracePair;
 /**
  * Allows you to drive the robot using the drive controller.
  */
-public class TeleOpCommand extends CommandBase {
+public class TankTeleOpCommand extends CommandBase {
 
   // Make the controllers a little easier to get to.
   private DriveController m_driveController = Robot.getInstance().getOIContainer()
@@ -48,7 +48,7 @@ public class TeleOpCommand extends CommandBase {
   /**
    * Takes inputs from the two joysticks on the drive controller.
    */
-  public TeleOpCommand() {
+  public TankTeleOpCommand() {
     addRequirements(m_driveTrain.getSubsystemBase());
     kDelay = m_drivetrainConfig.getInt("teleop.kdelay");
     kProportion = m_drivetrainConfig.getDouble("teleop.kproportion");

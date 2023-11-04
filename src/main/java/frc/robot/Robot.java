@@ -67,7 +67,6 @@ public class Robot extends TimedRobot {
     m_limelight.disableLED();
     m_subsystemContainer.getDrivetrain().setCoast(true);
     LiveWindow.disableAllTelemetry();
-    m_subsystemContainer.getArmExtRetBase().setZeroOffset();
     Trace.getInstance().logInfo("robot init finished");
   }
 
