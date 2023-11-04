@@ -62,6 +62,7 @@ public class Config4905 {
   private boolean m_isShowBot = false;
   private boolean m_isTopGun = false;
   private boolean m_isSAM = false;
+  private boolean m_isswervebot = false;
 
   private Config4905() {
     // first look to see if this is a roborio
@@ -75,6 +76,8 @@ public class Config4905 {
         m_isTopGun = true;
       } else if (m_robotName.equals("SAM")) {
         m_isSAM = true;
+      } else if (m_robotName.equals("SwerveBot")) {
+        m_isswervebot = true;
       }
 
     } else {
@@ -417,6 +420,10 @@ public class Config4905 {
 
   public Config getSamArmExtensionConfig() {
     return m_samArmExtensionConfig;
+  }
+
+  public boolean isSwerveBot() {
+    return m_isswervebot;
   }
 
   public boolean isRomi() {
