@@ -17,6 +17,7 @@ import frc.robot.oi.DriveController;
 import frc.robot.sensors.gyro.Gyro4905;
 import frc.robot.subsystems.drivetrain.*;
 import frc.robot.subsystems.drivetrain.DriveTrainMode.DriveTrainModeEnum;
+import frc.robot.subsystems.drivetrain.tankDriveTrain.TankDriveTrain;
 import frc.robot.telemetries.Trace;
 import frc.robot.telemetries.TracePair;
 
@@ -28,7 +29,8 @@ public class TeleOpCommand extends CommandBase {
   // Make the controllers a little easier to get to.
   private DriveController m_driveController = Robot.getInstance().getOIContainer()
       .getDriveController();
-  private DriveTrain m_driveTrain = Robot.getInstance().getSubsystemsContainer().getDrivetrain();
+  private TankDriveTrain m_driveTrain = Robot.getInstance().getSubsystemsContainer()
+      .getDrivetrain();
   private Config m_drivetrainConfig = Config4905.getConfig4905().getDrivetrainConfig();
   private Gyro4905 m_gyro = Robot.getInstance().getSensorsContainer().getGyro();
   private int m_currentDelay = 0;
