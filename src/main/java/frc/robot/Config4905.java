@@ -73,9 +73,7 @@ public class Config4905 {
       if (m_robotName.equals("ShowBot")) {
         m_isShowBot = true;
       } else if (m_robotName.equals("TopGun")) {
-        m_isTopGun = true;
-      } else if (m_robotName.equals("SAM")) {
-        m_isSAM = true;
+        m_isTopGun = true;    
       } else if (m_robotName.equals("SwerveBot")) {
         m_isswervebot = true;
       }
@@ -296,19 +294,6 @@ public class Config4905 {
     return m_compressorConfig;
   }
 
-  public Config getGripperConfig() {
-    return m_gripperConfig;
-  }
-
-  public boolean doesGripperExist() {
-    if (m_config.hasPath("subsystems.gripper")) {
-      return true;
-
-    } else {
-      return false;
-    }
-  }
-
   public boolean doesShowBotCannonExist() {
     if (m_config.hasPath("subsystems.showBotCannon")) {
       return true;
@@ -398,28 +383,6 @@ public class Config4905 {
       return true;
     }
     return false;
-  }
-
-  public boolean doesSamArmExtRetExist() {
-    if (m_config.hasPath("subsystems.samArmExtRet")) {
-      return true;
-    }
-    return false;
-  }
-
-  public Config getSamArmRotateConfig() {
-    return m_samArmRotateConfig;
-  }
-
-  public boolean doesSamArmRotateExist() {
-    if (m_config.hasPath("subsystems.samArmRotate")) {
-      return true;
-    }
-    return false;
-  }
-
-  public Config getSamArmExtensionConfig() {
-    return m_samArmExtensionConfig;
   }
 
   public boolean isSwerveBot() {
